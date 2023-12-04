@@ -1,0 +1,18 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+        var car = {
+            brand : "Renault",
+            get getBrand(){
+                return this.brand;
+            },
+            set setBrand(newBrand){
+                this.brand = newBrand;
+            }
+        };
+        car.setBrand = "Mercedes";
+        document.write("Brand:  " + car.getBrand);
+    </script>    
+  </body>
+</html>
