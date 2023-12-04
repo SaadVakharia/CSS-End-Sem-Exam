@@ -1,0 +1,33 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      var num1 = parseFloat(prompt("Enter Number 1: "));
+      var num2 = parseFloat(prompt("Enter Number 2: "));
+
+      var key = prompt("Enter opertion (+, -, *, /)").toString();
+
+      var result = "";
+
+      switch (key) {
+        case "+":
+          result = num1 + num2;
+          break;
+        case "-":
+          result = num1 - num2;
+          break;
+        case "*":
+          result = num1 * num2;
+          break;
+        case "/":
+          result = num1 / num2;
+          break;
+        default:
+          result = "Error!";
+          break;
+      }
+
+      prompt("Result: ", result);
+    </script>
+  </body>
+</html>
