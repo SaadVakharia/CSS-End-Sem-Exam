@@ -1,0 +1,21 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+        var str = prompt("Enter a String");
+
+        function isUppercase(str) {
+            var regex = /^[A-Z]/;
+
+            if (regex.test(str)) {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        document.write("Is First Letter Uppercase : " + isUppercase(str));
+
+    </script>
+  </body>
+</html>
