@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script>
+      var students = [["Amit", 70], ["Sumit", 78], ["Abhishek", 71]];
+
+      students.sort(function (a, b) {
+        return a[1] - b[1];
+      });
+      document.write("Students in ascending order of marks:");
+
+      for (var i = 0; i < students.length; i++) {
+        document.write(`<br>${students[i][0]}: ${students[i][1]} marks`);
+      }
+
+      var totalMarks = 0;
+      for (var i = 0; i < students.length; i++) {
+        totalMarks += students[i][1];
+      }
+
+      var averagePerformance = totalMarks / students.length;
+      document.write("<br>Average Performance of the class:" + averagePerformance);
+    </script>
+  </body>
+</html>
