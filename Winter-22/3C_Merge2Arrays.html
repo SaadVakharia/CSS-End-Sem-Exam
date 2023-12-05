@@ -1,0 +1,22 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      var arr1 = [1, 2, 3, 4];
+      var arr2 = [3, 4, 5, 6];
+      function mergeArray(arr1, arr2) {
+        var result = [];
+        var array = arr1.concat(arr2);
+        var len = array.length;
+
+        for (let i = 0; i < array.length; i++) {
+          if (!result.includes(array[i])) {
+            result.push(array[i]);
+          }
+        }
+        return result;
+      }
+      document.write("Result Array :" + mergeArray(arr1, arr2));
+    </script>
+  </body>
+</html>
