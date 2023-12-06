@@ -5,9 +5,9 @@
         var str = prompt("Enter a String");
 
         function isUppercase(str) {
-            var regex = /^[A-Z]/;
+            var regex = /[A-Z]/;
 
-            if (regex.test(str)) {
+            if (regex.test(str[0])) {
                 return true;
             }
             else{
