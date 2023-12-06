@@ -1,0 +1,18 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      function storeCookie() {
+        var pass = document.getElementById("password").value;
+        document.cookie = "Password:" + pass + ";";
+
+        document.write(document.cookie);
+      }
+    </script>
+    <form>
+      Username: <input type="text" /><br />
+      Password: <input type="text" id="password" /><br />
+      <button onclick="storeCookie()">Submit</button>
+    </form>
+  </body>
+</html>
