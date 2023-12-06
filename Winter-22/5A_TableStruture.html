@@ -1,25 +1,43 @@
 <html>
   <head></head>
   <body>
-    <table border="1px" style="border-collapse: collapse;">
-        <tbody>
-            <tr>
-                <td>Name: </td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Email: </td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Pincode: </td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button type="submit">Submit</button></td>
-            </tr>
-        </tbody>
+    <script>
+      function check() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var pin = Number(document.getElementById("pin").value);
+
+        if (name == "" || email == "" || pin == "") {
+          alert("Enter all details");
+        } else {
+          var regex = /\d{6}/;
+          if (regex.test(pin)) {
+            alert("Perfect Pin code");
+          } else {
+            alert("Wrong Pin code.");
+          }
+        }
+      }
+    </script>
+    <table border="1px" style="border-collapse: collapse">
+      <tbody>
+        <tr>
+          <td>Name:</td>
+          <td><input type="text" id="name" required /></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input type="text" id="email" required /></td>
+        </tr>
+        <tr>
+          <td>Pincode:</td>
+          <td><input type="text" id="pin" required /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button type="submit" onclick="check()">Submit</button></td>
+        </tr>
+      </tbody>
     </table>
   </body>
 </html>
