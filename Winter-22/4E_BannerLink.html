@@ -1,6 +1,6 @@
 <html>
   <head></head>
-  <body>
+  <body onload="RotateBanner()">
     <script>
       var banners = [
         ["google.jpg", "http://www.google.com"],
@@ -23,7 +23,7 @@
       setInterval(RotateBanner, 1000);
     </script>
     <a id="bannerLink">
-      <img src="google.jpg" id="banner" width="400" height="200" />
+      <img id="banner" width="400" height="200" />
     </a>
   </body>
 </html>
