@@ -1,0 +1,24 @@
+<html>
+  <head></head>
+  <body onload="RotateBanner()">
+    <script>
+      var banners = ["google.jpg", "msbte.jpg", "youtube.jpg"];
+
+      var currentIndex = 0;
+
+      function RotateBanner() {
+        var currentBanner = banners[currentIndex];
+        document.getElementById("banner").src = currentBanner;
+
+        currentIndex++;
+        if (currentIndex === banners.length) {
+          currentIndex = 0;
+        }
+      }
+      setInterval(RotateBanner, 1000);
+    </script>
+    <center>
+      <img id="banner" width="400" height="200" />
+    </center>
+  </body>
+</html>
