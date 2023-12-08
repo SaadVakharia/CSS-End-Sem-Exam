@@ -1,0 +1,17 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      function display() {
+        document.write(
+          "Email: " + myForm.email.value + "<br>Password: " + myForm.pass.value
+        );
+      }
+    </script>
+    <form id="myForm">
+      Enter Email: <input type="text" id="email" /> <br />
+      Enter Password: <input type="text" id="pass" /> <br />
+      <button onclick="display()">Display</button>
+    </form>
+  </body>
+</html>
