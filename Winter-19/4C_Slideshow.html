@@ -1,0 +1,25 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+        var pics = ['google.jpg', 'msbte.jpg', 'youtube.jpg'];
+        var count = 0;
+
+        function slideshow(status) {
+            if (document.images) {
+                count += status;
+                if (count >= pics.length) {
+                    count = 0;
+                }
+                if (count < 0) {
+                    count = pics.length - 1;
+                }
+            }
+            document.getElementById("img").src = pics[count];
+        }
+    </script>
+    <img src="google.jpg" id="img" height="400" width="600"> <br>
+    <button onclick="slideshow(1)">Next</button>
+    <button onclick="slideshow(-1)">Back</button>
+  </body>
+</html>
