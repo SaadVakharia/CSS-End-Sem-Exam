@@ -1,0 +1,16 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      function mouseOut() {
+        document.getElementById("demo").innerHTML = "Move mouse over me!";
+      }
+      function mouseOver() {
+        document.getElementById("demo").innerHTML = "Move mouse out of me!";
+      }
+    </script>
+    <p id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">
+      Move mouse over me!
+    </p>
+  </body>
+</html>
