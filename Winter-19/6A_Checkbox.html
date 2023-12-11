@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Print value of all checked CheckBoxes on Button click.</title>
+    <script type="text/javascript">
+      function printChecked() {
+        var items = document.getElementsByName("check_print");
+        var selectedItems = "";
+        for (var i = 0; i < items.length; i++) {
+          if (items[i].checked == true)
+            selectedItems += items[i].value + "<br>";
+        }
+        document.getElementById("y").innerHTML = selectedItems;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Select your favourite accessories:</h2>
+    <br />
+    <input type="checkbox" name="check_print" value="Red" />Red<br />
+    <input type="checkbox" name="check_print" value="Blue" />Blue<br />
+    <input type="checkbox" name="check_print" value="Green" />Green<br />
+    <input type="checkbox" name="check_print" value="Yellow" />Yellow<br />
+    <p><input type="button" onclick="printChecked()" value="Click me" /></p>
+    You Selected:
+    <p id="y"></p>
+  </body>
+</html>
